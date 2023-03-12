@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+
+    <h1 class="title">Ratio Finder</h1>
+    <div class="input-block">
+        <form method="post">
+            <input class="number-input" type="text" name="numOne" placeholder="1080" required autofocus>
+            <div class="colon">:</div>
+            <input class="number-input" type="text" name="numTwo" placeholder="1350" required>
+            <button class="btn" type="submit">Calculate Ratio</button>
+        </form>
+    </div>
+
+    {% if ratio %}
+    <h2 class="result-text">The ratio between the two numbers is:</h2>
+    <h2 class="result">{{ratio.firstNum}} : {{ratio.secondNum}}</h2>
+    {% endif %}
+
+</div>
+
+{% endblock %}
